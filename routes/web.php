@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,12 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+/* 
+get(表示)リクエスト('URL',[コントローラー名]::class,'メソッ名')
+->name('ルート名')
+*/
 Route::get('/test',[TestController::class,'test'])
 ->name('test');
+
+Route::get('tasks/home',[TaskController::class,'create'])
+->name('home');
