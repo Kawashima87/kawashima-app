@@ -51,7 +51,7 @@ class TestController extends Controller
 [Add   ] #新規（ファイル / コード・機能）追加
 [Update] #機能修正（バグではない）
 [Remove] #削除（ファイル / コード）
-
+*/
 
 # TODO:実装予定
 {
