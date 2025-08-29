@@ -47,10 +47,10 @@ class TestController extends Controller
 [Doc]          : READMEやコメント整理
 [Config]       : 環境設定や依存パッケージ調整
 
-[Fix   ]バグ修正
-[Add   ]新規（ファイル / コード・機能）追加
-[Update]機能修正（バグではない）
-[Remove]削除（ファイル / コード）
+[Fix   ] #修正
+[Add   ] #新規（ファイル / コード・機能）追加
+[Update] #機能修正（バグではない）
+[Remove] #削除（ファイル / コード）
 
 
 # TODO:実装予定
