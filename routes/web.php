@@ -41,3 +41,4 @@ Route::get('/test',[TestController::class,'test'])
 
 Route::get('tasks/home',[TaskController::class,'create'])
 ->name('home');
+

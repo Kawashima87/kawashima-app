@@ -59,12 +59,7 @@
                                     <td style="text-align: center; width:100px">title...</td>
                                     <td style="text-align: center; width:100px">tag...</td>
                                     <td style="text-align: center; width:5px">☆</td>
-
-                                    {{-- #NOTE:モーダル利用 --}}
-                                    @include('tasks/edit.blade.php');
-                                    <td style="text-align: center; width:40px">
-                                        <button onclick=""></button>
-                                    </td>
+                                    <td style="text-align: center; width:40px">編集</td>
                                     <td style="text-align: center; width:40px"><a href="#">削除</a></td>
                                 </tr>
                             @endfor
