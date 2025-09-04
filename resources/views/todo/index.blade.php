@@ -6,36 +6,34 @@
     </x-slot>
 
     <div class="py-12">
-        <form action="#" method="GET">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <div style="text-align: center">
-                            <input type="text" name="title" placeholder="title...">
-                            {{-- # TODO: DBから値を取得する処理終わったら、パラーメータ実装予定 --}}
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div style="text-align: center">
+                        <form action="{{route('todo.store')}}" method="POST">
+                            @csrf
+                            <input type="text" name="title" placeholder="title..." value="{{old('title')}}">
                             @for ($i = 0; $i < 3; $i++)
                                 <select name="tag" id="tag">
-                                    <option value="#">#sample</option>
-                                    <option value="#">#sample</option>
-                                    <option value="#">#sample</option>
-                                    <option value="#">#sample</option>
+                                    <option value="tag">#sample</option>
                                 </select>
                             @endfor
                             <x-primary-button>
                                 <input type="submit" value="作成">
                             </x-primary-button>
-                            {{-- # TODO: CSSはグリッドシステムで調整 --}}
+                        </form>
+                        <form action="">
                             <div style="clear: left; margin-top:10px;">
                                 <input style="width: 48%" type="text" name="keyword" placeholder="keyword...">
                                 <x-primary-button>
                                     <input type="submit" value="検索">
                                 </x-primary-button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
     <div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -43,7 +41,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                             
                     <div>
-                        {{-- # TODO: CSSを後ほど整える --}}
+                        {{-- @foreach ($tasks as $task)
+                            <p>{{$task->title}}</p>
+                        @endforeach --}}
                         <table style="margin: auto; width:55%">
                             <tr style="display: none;">
                                 <th style="text-align: center">完了</th>

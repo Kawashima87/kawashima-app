@@ -21,6 +21,9 @@
         </style>
     </head>
     <body class="antialiased">
+    @can('test')
+        テストゲート
+    @endcan
     こんにちは
     @auth
         @for ($i = 0; $i < 10; $i++)

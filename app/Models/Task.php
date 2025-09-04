@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     // テーブル名はデフォルトで "tasks" なので指定不要だが、明示しておくなら↓
-    // protected $table = 'tasks';
+    protected $table = 'tasks';
 
     // Eloquentのタイムスタンプを有効化しつつ、カラム名を独自名に変更
     public $timestamps = true;

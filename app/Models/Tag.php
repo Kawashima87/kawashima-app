@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    // protected $table = 'tags'; // 明示したい場合
+    protected $table = 'tags'; // 明示したい場合
     public $timestamps = false;  // マイグレーションでtimestamps作っていないため
 
     protected $fillable = [
